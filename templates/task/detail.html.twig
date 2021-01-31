@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tasks{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+<h2>{{task.title}}</h2>
+<p class="data-task">
+    {{task.user.name ~ " " ~ task.user.surname}} - {{task.createdAt|date('d/m/Y h:i')}}
+</p>
+
+<p>
+    <p>{{task.content}}</p>
+</p>
+</div>
+{% endblock %}
